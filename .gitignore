@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Mapbox/Assembly assets
+assembly.css
+assembly.css.map
+assembly.js
+assembly.min.css
