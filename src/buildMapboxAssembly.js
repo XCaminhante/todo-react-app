@@ -1,10 +1,10 @@
 const Assembly = require('../../assembly')
+const fs = require('fs')
 
 options = {}
 
-Assembly.buildUserAssets('../public/',options)
-  .then(() => console.log('/public build done'))
-  .catch((e) => console.error(e))
 Assembly.buildUserAssets('./',options)
-  .then(() => console.log('/src build done'))
+  .then(() => {
+    fs.renameSync('./assembly.js','../public/assembly.js')
+    console.log('build done') })
   .catch((e) => console.error(e))
